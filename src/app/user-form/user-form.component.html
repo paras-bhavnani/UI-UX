@@ -1,0 +1,40 @@
+<form [formGroup]="profileForm" class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Profile Information</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="full-width">
+              <input formControlName="name" matInput placeholder="Book Name">
+              
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="full-width">
+              <input  formControlName="brand" matInput placeholder="Brand name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <mat-form-field class="full-width">
+              <textarea  formControlName="quantity" matInput placeholder="Quantity eg 5"></textarea>
+            </mat-form-field>
+          </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="status" matInput placeholder="First name">
+                </mat-form-field>
+              </div>
+        </div>
+      </mat-card-content>
+     <mat-card-actions>
+        <button (click)="saveForm()" mat-raised-button color="primary">Save</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
